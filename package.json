@@ -1,0 +1,12 @@
+{
+  "name": "redresseur-de-code-legacy",
+  "version": "1.0.0",
+  "description": "Outil pour analyser et refactoriser le code hérité",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Votre Nom",
+  "license": "MIT"
+}
