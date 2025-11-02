@@ -10,6 +10,10 @@ if (!codePath) {
 }
 
 function analyzeCode(directory) {
+    if (!fs.existsSync(directory)) {
+        console.error(`Le chemin spécifié n'existe pas : ${directory}`);
+        return;
+    }
     // Logique d'analyse pour le code hérité
     fs.readdir(directory, (err, files) => {
         if (err) {
