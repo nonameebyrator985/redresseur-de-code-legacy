@@ -20,7 +20,7 @@ function analyzeCode(directory) {
             const filePath = path.join(directory, file);
             fs.stat(filePath, (err, stats) => {
                 if (err) {
-                    console.error(`Erreur lors de la récupération des stats du fichier : ${err.message}`);
+                    console.error(`Erreur lors de la récupération des informations du fichier : ${err.message}`);
                     return;
                 }
                 if (stats.isDirectory()) {
