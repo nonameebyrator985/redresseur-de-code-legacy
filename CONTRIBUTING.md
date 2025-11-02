@@ -11,7 +11,7 @@ Les suggestions sont les bienvenues ! Ouvrez une issue pour proposer une nouvell
 ## Soumissions de Code
 1. Forkez le dépôt.
 2. Créez une branche pour votre fonctionnalité ou correction (`git checkout -b feature/ma-fonctionnalite`).
-3. Commitez vos modifications (`git commit -m 'Ajoute ma fonctionnalité'`).
+3. Commitez vos modifications (`git commit -m 'Ajoute ma fonctionnalité'` ou `git commit -m 'Correction de bogue'`).
 4. Poussez à votre dépôt (`git push origin feature/ma-fonctionnalite`).
 5. Ouvrez une Pull Request.
 
