@@ -1,7 +1,7 @@
 {
   "name": "redresseur-de-code-legacy",
   "version": "1.0.0",
-  "description": "Outil pour analyser et refactoriser le code hérité",
+  "description": "Outil pour analyser et refactoriser le code héritage",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
