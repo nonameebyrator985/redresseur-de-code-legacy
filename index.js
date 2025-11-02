@@ -19,6 +19,10 @@ function analyzeCode(directory) {
         files.forEach(file => {
             const filePath = path.join(directory, file);
             fs.stat(filePath, (err, stats) => {
+                if (err) {
+                    console.error(`Erreur lors de la récupération des stats du fichier : ${err.message}`);
+                    return;
+                }
                 if (stats.isDirectory()) {
                     analyzeCode(filePath);
                 } else {
