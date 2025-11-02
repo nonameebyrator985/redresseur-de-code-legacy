@@ -5,33 +5,32 @@ const args = process.argv.slice(2);
 const codePath = args[0];
 
 if (!codePath) {
-    console.error('Veuillez fournir un chemin vers le code à analyser.');
+    console.error('Please provide a path to analyze.');
     process.exit(1);
 }
 
 function analyzeCode(directory) {
     if (!fs.existsSync(directory)) {
-        console.error(`Le chemin spécifié n'existe pas : ${directory}`);
+        console.error(`The specified path does not exist: ${directory}`);
         return;
     }
-    // Logique d'analyse pour le code hérité
     fs.readdir(directory, (err, files) => {
         if (err) {
-            console.error(`Erreur lors de la lecture du répertoire : ${err.message}`);
+            console.error(`Error reading directory: ${err.message}`);
             return;
         }
         files.forEach(file => {
             const filePath = path.join(directory, file);
             fs.stat(filePath, (err, stats) => {
                 if (err) {
-                    console.error(`Erreur lors de la récupération des informations du fichier : ${err.message}`);
+                    console.error(`Error retrieving file info: ${err.message}`);
                     return;
                 }
                 if (stats.isDirectory()) {
                     analyzeCode(filePath);
                 } else {
                     console.log(`Analyzing: ${filePath}`);
-                    // Ajouter logique d'analyse ici
+                    // Add analysis logic here
                 }
             });
         });
